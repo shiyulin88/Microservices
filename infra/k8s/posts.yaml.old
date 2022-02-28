@@ -1,0 +1,8 @@
+apiVersion: v1 #can add our own custom objects because k8 is extensible (look at v1 default pool of kubernetes objects we can create)
+kind: Pod #type of object we're collecting, pod is going to wrap up container
+metadata: #config options for the opject we're creating
+  name: posts #pod named posts
+spec: #exact attributes we want to apply to the pod we're creating
+  containers: #can have many containers in a pod
+    - name: posts #the containers is going to be an array, it's what the - means , one container named posts
+      image: shiyulin/posts:0.0.1 #the image we use for the container 
